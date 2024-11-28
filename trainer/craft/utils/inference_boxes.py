@@ -219,7 +219,7 @@ def load_icdar2015_gt(dataFolder, isTraing=False):
         gt_path = os.path.join(os.path.join(dataFolder, gt_folderName), gt_path)
         img_path = (
             gt_path.replace(gt_folderName, img_folderName)
-            .replace(".txt", ".jpg")
+            .replace(".txt", ".png")
             .replace("gt_", "")
         )
         image = cv2.imread(img_path)
@@ -267,7 +267,7 @@ def load_icdar2013_gt(dataFolder, isTraing=False):
         gt_path = os.path.join(os.path.join(dataFolder, gt_folderName), gt_path)
         img_path = (
             gt_path.replace(gt_folderName, img_folderName)
-            .replace(".txt", ".jpg")
+            .replace(".txt", ".png")
             .replace("gt_", "")
         )
         image = cv2.imread(img_path)
