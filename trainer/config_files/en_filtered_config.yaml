@@ -2,7 +2,7 @@ number: '0123456789'
 symbol: "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ €"
 lang_char: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
 experiment_name: 'en_filtered'
-train_data: 'all_data'
+train_data: 'all_data/en_train'
 valid_data: 'all_data/en_val'
 manualSeed: 1111
 workers: 6

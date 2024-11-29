@@ -12,3 +12,5 @@ pyclipper
 ninja
 wandb
 tqdm
+natsort
+nltk
