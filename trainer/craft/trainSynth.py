@@ -390,7 +390,7 @@ def main_worker(gpu, port, ngpus_per_node, config, buffer_dict, exp_name):
 
     # Apply config to wandb
     if gpu == 0 and config["wandb_opt"]:
-        wandb.init(project="craft-stage1", entity="gmuffiness", name=exp_name)
+        wandb.init(project="craft-stage1", name=exp_name)
         wandb.config.update(config)
 
     batch_size = int(config["train"]["batch_size"] / ngpus_per_node)

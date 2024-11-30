@@ -368,7 +368,7 @@ if __name__ == "__main__":
     config = DotDict(config)
 
     if config["wandb_opt"]:
-        wandb.init(project="evaluation", entity="gmuffiness", name=args.yaml)
+        wandb.init(project="evaluation", name=args.yaml)
         wandb.config.update(config)
 
     val_result_dir_name = args.yaml
