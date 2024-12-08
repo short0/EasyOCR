@@ -1,4 +1,4 @@
-wandb_opt: False
+wandb_opt: True
 
 results_dir: "./exp/"
 vis_test_dir: "./vis_result/"
@@ -14,7 +14,7 @@ train:
   synth_data_dir: "/data/SynthText/"
   synth_ratio: 5
   real_dataset: custom
-  ckpt_path: "./pretrained_model/CRAFT_clr_amp_14000.pth"
+  ckpt_path: "./pretrained_model/CRAFT_clr_amp_29500.pth"
   eval_interval: 1000
   batch_size: 5
   st_iter: 0
@@ -31,7 +31,7 @@ train:
   data:
     vis_opt: False
     pseudo_vis_opt: False
-    output_size: 768
+    output_size: 100
     do_not_care_label: ['###', '']
     mean: [0.485, 0.456, 0.406]
     variance: [0.229, 0.224, 0.225]
@@ -46,23 +46,23 @@ train:
     syn_sample: -1
     custom_sample: -1
     syn_aug:
-      random_scale:
-        range: [1.0, 1.5, 2.0]
-        option: False
-      random_rotate:
-        max_angle: 20
-        option: False
-      random_crop:
-        version: "random_resize_crop_synth"
-        option: True
-      random_horizontal_flip:
-        option: False
-      random_colorjitter:
-        brightness: 0.2
-        contrast: 0.2
-        saturation: 0.2
-        hue: 0.2
-        option: True
+      # random_scale:
+      #   range: [1.0, 1.5, 2.0]
+      #   option: False
+      # random_rotate:
+      #   max_angle: 20
+      #   option: False
+      # random_crop:
+      #   version: "random_resize_crop_synth"
+      #   option: True
+      # random_horizontal_flip:
+      #   option: False
+      # random_colorjitter:
+      #   brightness: 0.2
+      #   contrast: 0.2
+      #   saturation: 0.2
+      #   hue: 0.2
+      #   option: True
     custom_aug:
       random_scale:
         range: [ 1.0, 1.5, 2.0 ]
@@ -77,7 +77,7 @@ train:
         rnd_threshold: 1.0
         option: True
       random_horizontal_flip:
-        option: True
+        option: False
       random_colorjitter:
         brightness: 0.2
         contrast: 0.2
@@ -97,4 +97,4 @@ test:
     mag_ratio: 1.75
     poly: False
     cuda: True
-    vis_opt: False
+    vis_opt: True
